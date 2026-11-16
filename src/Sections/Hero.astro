@@ -1,0 +1,58 @@
+---
+import Menu from "../components/Menu.astro";
+import Button_Orange from "../components/Button_Orange.astro";
+import Data from "../Data/Home.js";
+import  { MapPin, Calendar, Landmark }  from "@lucide/astro";
+---
+
+<div class="relative">
+  <div class="pt-5"><Menu /></div>
+  <div class="flex items-center gap-0 px-6 sm:px-12">
+    <div class="">
+      <img
+        src="/Logo_Rodeo_Desierto_Super_Bull.avif"
+        alt="Rodeo Del Desierto"
+        class="w-126 h-auto mt-15 mb-4 sm:mt-5 "
+      />
+      <img
+        src="/Logo_Vive_La_Experiencia.avif"
+        alt="Rodeo Del Desierto"
+        class="w-126 h-auto"
+      />
+      <h3
+        class="anton text-xl sm:text-4xl font-bold text-white/80 my-5 flex items-center gap-1"
+      >
+        SALTILLO, COAHUILA <div class="border-1 border-white/20 my-2 w-0.5 h-6">
+        </div>
+
+        <span class="text-orange-500"> DICIEMBRE 2026</span>
+      </h3>
+      <p class="text-white/70 my-5">
+    La experiencia del rodeo está por comenzar.
+      </p>
+      <Button_Orange Text="Síguenos en redes" />
+      <div class="text-white/50 my-5  flex items-center gap-2 text-sm">
+        <p  class="flex items-center gap-2">
+          <MapPin size={24} color="#E49F4C"/>
+          Saltillo, Coahuila        
+      
+        </p>
+        <p class="flex items-center gap-2"> <Calendar size={24} color="#E49F4C"/>Diciembre 2026  </p>
+        </div>
+        <p class="flex items-center gap-2 text-white/50 text-sm mb-12"> <Landmark size={24} color="#E49F4C"/>Recinto: Lienzo Charro, sujeto a
+          confirmación oficial</p>
+    
+    </div>
+
+    <div class="">
+      <img
+        src={Data.fondo}
+        alt="Rodeo Del Desierto"
+        class="mask-b-from-5% mask-b-to-95% sm:mask-b-from-50% brightness-75 saturate-75 sm:mask-radial-[50%_90%] sm:mask-radial-from-80% sm:w-[950px] -z-1 h-auto absolute w-full h-full object-cover sm:top-18  top-0 right-0"
+      />
+     
+  </div>
+
+   <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-transparent to-transparent pointer-events-none"></div>
+    </div>
+</div>

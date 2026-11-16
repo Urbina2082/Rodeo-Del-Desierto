@@ -1,0 +1,22 @@
+---
+const { sub,title,description } = Astro.props;
+---
+
+<div class="my-12   text-white/80 max-w-lg">
+    <p class="text-ambar tracking-widest text-sm flex items-center gap-3
+  before:content-['']
+  before:w-[40px]
+  before:h-[4px]
+  before:shrink-0
+  before:rounded-[2px]
+  before:bg-[image:var(--bg-image-hero)]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-[length:140px_auto]
+  before:shadow-[0_0_12px_#f15a2473]"> {sub}</p>
+    <h3 class="anton text-3xl sm:text-5xl my-3">{title}</h3>
+    <p class=" text-white/50 my-3">
+       {description}
+    </p>
+</div>
+

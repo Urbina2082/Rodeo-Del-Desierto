@@ -1,0 +1,48 @@
+---
+import InitSection from "../components/InitSection.astro";
+
+const data = [
+    {
+        num:'01',
+        title:'ADRENALINA EN LA ARENA',
+        par:'La fuerza, el polvo y la tensión de la arena, a unos metros de ti.'
+    },
+      {
+        num:'02',
+        title:'TRADICION VAQUERA',
+        par:'El oficio y el orgullo del norte, presentes en cada salida.'
+    },
+      {
+        num:'03',
+        title:'UNA EXPERIENCIA PARA COMPARTIR',
+        par:'Una noche para vivirla con la familia y los amigos.'
+    }
+];
+---
+
+
+<div class=" mx-5 sm:mx-20">
+   <div class=" md:flex gap-15 ">
+        <img src="/toroVaquero.avif" class=" rounded-2xl w-md  shadow-2xl shadow-amber-900" alt="">
+        <div class="">
+            <InitSection sub="EL ESPECTACULO" 
+              title="EL DESIERTO COBRA VIDA" description="Prepárate para una experiencia de rodeo que reúne emoción, tradición vaquera y el espectáculo de la arena." />
+       <div class="flex flex-wrap flex-col w-86 bg-white/1 backdrop-blur-sm px-8 py-8 border border-white/10 rounded-3xl gap-6">
+
+  {data.map((d) => (
+    <div class="flex gap-5">
+      <div class="bg-[image:var(--bg-image-hero)] bg-cover bg-clip-text text-transparent text-3xl font-bold">
+        {d.num}
+      </div>
+
+      <div class="min-w-0">
+        <h4 class="anton text-white text-2xl">{d.title}</h4>
+        <p class="text-white/50 break-words">{d.par}</p>
+      </div>
+    </div>
+  ))}
+
+</div>
+    </div>
+    </div>
+</div>
