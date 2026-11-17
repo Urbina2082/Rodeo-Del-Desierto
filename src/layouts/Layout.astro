@@ -7,10 +7,21 @@ import "../styles/global.css";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" /><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <meta
+      property="og:image"
+      content="https://rodeodeldesierto.netlify.app/Vaquerosalto.jpg"
+    />
+
+    <meta
+      name="description"
+      content="Rodeo del Desierto – Vive una experiencia llena de tradición, cultura vaquera y emoción. Descubre todo lo que hace único a este gran evento."
+    />
+  
+
+    <link rel="icon" type="image/webp" href="/R.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>Rodeo Del Desierto</title>
   </head>
@@ -23,10 +34,17 @@ import "../styles/global.css";
 <style>
   html,
   body {
-    margin: 0;
+   
     padding: 0;
+   
+    
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+   margin: 0;
     width: 100%;
-    height: 100%;
+   
+    height: 100vh;
+   
   
   }
 
