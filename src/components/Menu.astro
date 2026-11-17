@@ -2,37 +2,59 @@
 import Button_Orange from "./Button_Orange.astro";
 ---
 
-<div
-  class=" mt-2  mx-4 sm:mx-12  text-white/60 gap-8  sm:relative right-0 fixed z-10  flex items-center justify-center sm:justify-around backdrop-blur-sm bg-[#00000010] border-1 border-white/20 rounded-full py-3 px-5">
-  
-  <div class="">
+<div class="mt-2 mx-4 sm:mx-12 text-white/60 gap-8 sm:relative fixed right-0 left-0 z-10 flex items-center justify-between sm:justify-around backdrop-blur-sm bg-[#00000010] border border-white/20 rounded-full py-3 px-5">
+
+  <!-- LOGO -->
+  <div>
     <img
       src="/Logo_Rodeo_Del_Desierto.avif"
       alt="Logo"
-      class=" sm:block w-49 flex"
+      class="w-49"
     />
   </div>
-  <div class="sm:hidden">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-menu preview-icon"
-      ><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"
-      ></path></svg>
-  </div>
-  <nav>
-    <ul class="hidden md:flex justify-center gap-12 text-sm montserrat ">
-      <li><a href="/">INICIO</a></li>
-      <li><a href="/about">EXPERIENCIA</a></li>
-      <li><a href="/contact">CONTACTO</a></li>
+
+  <!-- CHECKBOX -->
+  <input
+    type="checkbox"
+    id="menu"
+    class="peer hidden"
+  />
+
+  <!-- BOTON HAMBURGUESA -->
+  <label
+    for="menu"
+    class="sm:hidden cursor-pointer flex flex-col gap-[6px] z-20"
+  >
+    <span class="w-7 h-[2px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+    <span class="w-7 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+    <span class="w-7 h-[2px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+  </label>
+
+  <!-- NAVEGACION -->
+  <nav class="hidden sm:block">
+    <ul class="flex justify-center gap-12 text-sm montserrat">
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">EXPERIENCIA</a></li>
+      <li><a href="#">CONTACTO</a></li>
     </ul>
   </nav>
-  <div class="hidden md:block"><Button_Orange Text="BOLETOS" /></div>
+
+  <!-- BOTON BOLETOS -->
+  <div class="hidden md:block">
+    <Button_Orange Text="Ver mas" enlace="#mas" />
+  </div>
+
+  <!-- MENU MOVIL -->
+  <nav class="absolute top-full left-0 right-0 mt-3 p-6 rounded-3xl border border-white/20 backdrop-blur-xl bg-black/80 flex-col gap-6 hidden peer-checked:flex sm:hidden">
+
+    <a href="#" class="text-sm hover:text-white transition">INICIO</a>
+    <a href="#" class="text-sm hover:text-white transition">EXPERIENCIA</a>
+    <a href="#" class="text-sm hover:text-white transition">CONTACTO</a>
+
+    <div>
+      <Button_Orange Text="BOLETOS" />
+    </div>
+
+  </nav>
+
 </div>
