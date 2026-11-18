@@ -52,6 +52,11 @@ const fotosDefault = [
     alt: "",
     className: "gallery-item--bottom",
   },
+   {
+    src: "/11.avif",
+    alt: "",
+    className: "gallery-item--bottom",
+  },
 ];
 
 const { images = fotosDefault } = Astro.props;
@@ -68,9 +73,11 @@ const fotos = images.map((foto, index) => ({
 
 <section class="gallery-section" id="galeria" aria-labelledby="gallery-title">
 
-<InitSection sub="EL ESPECTACULO" 
-              title="EL DESIERTO COBRA VIDA" description="Prepárate para una experiencia de rodeo que reúne emoción, tradición vaquera y el espectáculo de la arena." />
-   
+<InitSection
+  sub="NUESTRA GALERÍA"
+  title="ASI SE VIVE EL RODEO DEL DESIERTO"
+  description="Revive los mejores momentos del Rodeo del Desierto. Emoción, tradición vaquera y grandes espectáculos que hacen de cada edición una experiencia inolvidable."
+/>
 
   <div class="gallery-grid">
 
