@@ -3,16 +3,57 @@
 ---
 
 <div class="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5 tracking-widest ">
-    <div class="days flex  gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50" ><span class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>
+    <div class=" flex  gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50" >
+        <span  id="day" class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>
         DIAS      
     </div> 
-    <div class="hours flex gap-2 flex-col items-center border border-white/30 bg-white/3  backdrop-blur-sm rounded-2xl py-5 px-3  text-sm text-white/50"><span class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>HORAS
+    <div  class=" flex gap-2 flex-col items-center border border-white/30 bg-white/3  backdrop-blur-sm rounded-2xl py-5 px-3  text-sm text-white/50">
+        <span id="hour" class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>HORAS
         
     </div>
-    <div class="minutes flex gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50 "> <span class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>MINUTOS
+    <div  class=" flex gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50 "> 
+        <span id="minute" class=" text-5xl font-bold bg-[image:var(--bg-image-hero)] bg-cover bg-center bg-clip-text  text-transparent">00</span>MINUTOS
        
     </div>
-    <div class="seconds flex gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50"> <span class=" text-5xl font-bold bg-[image:var(--bg-image-hero)]  bg-cover bg-center bg-clip-text  text-transparent">00</span>SEGUNDOS
+    <div  class=" flex gap-2 flex-col items-center border border-white/30 bg-white/3 backdrop-blur-sm rounded-2xl py-5 px-3   text-sm text-white/50"> <span id="second" class=" text-5xl font-bold bg-[image:var(--bg-image-hero)]  bg-cover bg-center bg-clip-text  text-transparent">00</span>SEGUNDOS
        
     </div>
 </div>
+
+
+
+<script>
+const countDownDate = new Date("December 27, 2026 18:00:00").getTime();
+
+    const updateCountdown = () => {
+        const now = Date.now();
+
+        const timeleft = countDownDate - now ;
+
+        if (timeleft < 0) {
+            clearInterval(timerInterval);
+           
+        } 
+        
+        
+       
+      const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+      document.getElementById("day").innerHTML = `${days} `;
+      document.getElementById("hour").innerHTML = `${hours} `;
+      document.getElementById("minute").innerHTML = `${minutes} `;
+      document.getElementById("second").innerHTML = `${seconds} `;
+    };
+    const timerInterval = setInterval(updateCountdown, 1000)
+ 
+
+   
+
+
+
+</script>
